@@ -20,12 +20,12 @@
    ```
    Por qué?
    ```powershell
-out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a un valor no nulo.
-En línea: 1 Carácter: 42
-+ get-service | export-csv servicios.csv | out-file
-+                                          ~~~~~~~~
-    + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
-    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
+      out-file : No se puede procesar el argumento porque el valor del argumento "path" es NULL. Cambie el valor del argumento "path" a       un valor no nulo.
+      En línea: 1 Carácter: 42
+      + get-service | export-csv servicios.csv | out-file
+      +                                          ~~~~~~~~
+         + CategoryInfo          : InvalidArgument: (:) [Out-File], PSArgumentNullException
+         + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.OutFileCommand
    ```
    
    Esto pasa ya que cuando se va a ejecutar el out-line el pipe no puede exportar nada porque esta vacio 
