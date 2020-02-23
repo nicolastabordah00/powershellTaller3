@@ -88,7 +88,7 @@
     descripción, el ID del parche, y la fecha de instalación.
     Escriba los resultados a un archivo HTML.
     ```console
-    PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn | ConvertTo-Html | Out-file HotFix.html
+    PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn |       ConvertTo-Html | Out-file HotFix.html
     ```
  13. Muestre una lista de las 50 entradas más nuevas del log de eventos System.
     Ordene la lista de modo que las entradas más antiguas aparezcan primero;
@@ -96,7 +96,7 @@
     Muestre el número índice, la hora y la fuente para cada entrada. Escriba
     esta información en un archivo de texto plano.
     ```console
-    PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property Index, TimeWritten, Source
+    PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property         Index, TimeWritten, Source
     ```
     
 
