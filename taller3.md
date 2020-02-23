@@ -89,7 +89,7 @@
     descripción, el ID del parche, y la fecha de instalación.
     Escriba los resultados a un archivo HTML.
     
-    ```powershell
+    ```console
        PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn        | ConvertTo-Html | Out-file HotFix.html
     ```
  13. Muestre una lista de las 50 entradas más nuevas del log de eventos System.
