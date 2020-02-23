@@ -80,6 +80,7 @@
     de instalación, y muestre en pantalla únicamente la fecha de instalación,
     el usuario que instaló el parche, y el ID del parche. Recuerde examinar
     los nombres de las propiedades.
+    
     ```console
     PS C:\Users\Nicolas> Get-HotFix | Select-Object -Property InstallDate,InstalledBy, HotFixID |  Sort-Object -Property InstallDate
     ```
@@ -87,6 +88,7 @@
     resultados por la descripción del parche, e incluya en el listado la
     descripción, el ID del parche, y la fecha de instalación.
     Escriba los resultados a un archivo HTML.
+    
     ```console
     PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn |       ConvertTo-Html | Out-file HotFix.html
     ```
@@ -95,8 +97,9 @@
     las entradas producidas al mismo tiempo deben ordenarse por número índice.
     Muestre el número índice, la hora y la fuente para cada entrada. Escriba
     esta información en un archivo de texto plano.
+    
     ```console
-    PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property         Index, TimeWritten, Source
+    PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property Index, TimeWritten, Source
     ```
     
 
