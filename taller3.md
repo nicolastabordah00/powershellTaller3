@@ -81,7 +81,7 @@
     el usuario que instaló el parche, y el ID del parche. Recuerde examinar
     los nombres de las propiedades.
     
-    ```powershell
+    ```console
        PS C:\Users\Nicolas> Get-HotFix | Select-Object -Property InstallDate,InstalledBy, HotFixID |  Sort-Object -Property InstallDate
     ```
  12. Complemente la solución a la pregunta 11, para que el sistema ordene los
@@ -98,7 +98,7 @@
     Muestre el número índice, la hora y la fuente para cada entrada. Escriba
     esta información en un archivo de texto plano.
     
-    ```powershell
+    ```console
        PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property          Index, TimeWritten, Source
     ```
     
