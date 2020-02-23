@@ -68,12 +68,12 @@
     Thursday
    ```
    ```console
-   PS C:\Users\Nicolas> Get-Date | Select-Object -Property DayOfWeek
+      PS C:\Users\Nicolas> Get-Date | Select-Object -Property DayOfWeek
    ```
 10. Identifique un cmdlet que muestre información acerca de parches (hotfixes)
     instalados en el sistema.
     ```console
-    PS C:\Users\Nicolas> Get-HotFix 
+       PS C:\Users\Nicolas> Get-HotFix 
     ```
  11. Empleando el cmdlet de la pregunta 10, muestre una lista de parches
     instalados. Luego extienda la expresión para ordenar la lista por fecha
@@ -82,7 +82,7 @@
     los nombres de las propiedades.
     
     ```console
-    PS C:\Users\Nicolas> Get-HotFix | Select-Object -Property InstallDate,InstalledBy, HotFixID |  Sort-Object -Property InstallDate
+       PS C:\Users\Nicolas> Get-HotFix | Select-Object -Property InstallDate,InstalledBy, HotFixID |  Sort-Object -Property InstallDate
     ```
  12. Complemente la solución a la pregunta 11, para que el sistema ordene los
     resultados por la descripción del parche, e incluya en el listado la
@@ -90,7 +90,7 @@
     Escriba los resultados a un archivo HTML.
     
     ```console
-    PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn |       ConvertTo-Html | Out-file HotFix.html
+       PS C:\Users\Nicolas> Get-HotFix | Sort-Object -Property Description | Select-Object -Property Description, HotFixID, InstalledOn        | ConvertTo-Html | Out-file HotFix.html
     ```
  13. Muestre una lista de las 50 entradas más nuevas del log de eventos System.
     Ordene la lista de modo que las entradas más antiguas aparezcan primero;
@@ -99,7 +99,7 @@
     esta información en un archivo de texto plano.
     
     ```console
-    PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property Index, TimeWritten, Source
+       PS C:\Users\Nicolas> Get-EventLog -LogName system -Newest 50| Sort-Object -Property TimeWritten,Index | Select-Object -Property          Index, TimeWritten, Source
     ```
     
 
